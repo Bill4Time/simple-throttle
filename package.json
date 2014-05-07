@@ -1,6 +1,6 @@
 {
     "name": "simple-throttle",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "description": "Throttle function calls",
     "main": "throttle.js",
     "repository": {

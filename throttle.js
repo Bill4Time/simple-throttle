@@ -11,15 +11,15 @@ var FunctionThrottleManager = function (throttleLimit) {
         clearTimeout(timer);
 
         timer = setTimeout(function () {
-           args.fn.apply(args.scope, args.args);
+            args.fn.apply(args.scope, args.args);
         }, alternateThrottleLimit || throttleLimit);
     };
 };
 
-if (module && module.exports) {
-    module.exports = FunctionThrottleManager;
-} else if (define && define.amd) {
+if (typeof define === "function" && typeof define.amd === "object" && define.amd) {
     define(function () {
         return FunctionThrottleManager;
     });
+} else if (module && module.exports) {
+    module.exports = FunctionThrottleManager;
 }
